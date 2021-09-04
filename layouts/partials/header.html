@@ -5,3 +5,16 @@
     <a href="{{ .Site.BaseURL }}">‹ {{ .Site.Title }}</a>
   {{ end }}
 </h2>
+{{ range $links := .Site.Params.links }}
+  <nav>
+    {{- range $links.link -}}
+      <a href="{{ .href }}"
+       {{ if .new_tab }} target="_blank" {{end}}
+       {{ if .smart_email_link }} class="email-hook" id="about-email" title="Click to show email" {{end}}
+      >
+        {{- .name -}}
+      </a>
+      &nbsp;&nbsp;
+    {{- end -}}
+    </nav>
+{{ end }}
