@@ -112,7 +112,7 @@ hr {
 
 pre,
 code {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: monospace;
   border-radius: 3px;
 }
 code {
@@ -122,7 +122,7 @@ code {
   color: nth($primary_colors, 2);
 }
 pre code {
-  background: nth($primary_colors, 5);
+  background: nth($gray_colors, 1);
   display: block;
   margin: 1em 0;
   padding: 0.75em 1em;
