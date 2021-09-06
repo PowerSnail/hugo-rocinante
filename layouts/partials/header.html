@@ -1,20 +1,11 @@
 <h2>
-  {{ if and (.IsHome) (not (.Scratch.Get "pagenumber")) }}
-    › {{ .Site.Title }}
-  {{ else }}
-    <a href="{{ .Site.BaseURL }}">‹ {{ .Site.Title }}</a>
-  {{ end }}
+  <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 </h2>
 {{ range $links := .Site.Params.links }}
-  <nav>
-    {{- range $links.link -}}
-      <a href="{{ .href }}"
-       {{ if .new_tab }} target="_blank" {{end}}
-       {{ if .smart_email_link }} class="email-hook" id="about-email" title="Click to show email" {{end}}
-      >
-        {{- .name -}}
-      </a>
-      &nbsp;&nbsp;
-    {{- end -}}
-    </nav>
+<nav>
+  {{- range $index, $link := $links.link -}}
+  {{if $index }} | {{end}}
+  <a href="{{ .href }}"> {{ .name }}</a>
+  {{- end -}}
+</nav>
 {{ end }}

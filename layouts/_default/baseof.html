@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html {{ if isset .Params "lang" }}
+    lang="{{ .Params.lang }}"
+  {{- else -}}  
+    lang="en"
+  {{- end -}}
+>
   {{- partial "head.html" . -}}
   <body>
     <header>
