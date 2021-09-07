@@ -5,14 +5,14 @@
 $fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
   sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $gray_colors: (#141413, #504e4d, #969391, #b4b0ae, #fff9f6);
-$primary_colors: (#1e1306, #503921, #96795b, #ded4bb, #FFFCF4);
-$red_accent_colors: (#500a0a, #961313, #DC3030, #f0a6a6, #ffe1e1);
+$primary_colors: (#1e1306, #503921, #96795b, #ded4bb, #fffcf4);
+$red_accent_colors: (#500a0a, #961313, #dc3030, #f0a6a6, #ffe1e1);
 
 body {
   font-family: sans-serif;
   color: nth($gray_colors, 1);
   margin: auto;
-  background-color: nth($gray_colors, 5);;
+  background-color: nth($gray_colors, 5);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -194,11 +194,12 @@ main {
 
 header {
   max-width: 800px;
+  min-height: 100px;
   margin: 0px auto;
-  padding-top: 50px;
-  padding-bottom: 60px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   background: url("/images/front-cover.png") no-repeat;
   background-size: cover;
   background-color: nth($primary_colors, 2);
@@ -206,18 +207,25 @@ header {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   color: nth($primary_colors, 5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+
   a {
     color: nth($primary_colors, 5);
   }
   nav {
-    padding: 0 20px;
+    margin: 4px;
     display: block;
-    float: right;
+
+    .bar-delimiter {
+      margin-left: 2px;
+      margin-right: 2px;
+    }
   }
   h2 {
-    padding: 0 20px;
-    margin: auto;
-    float: left;
+    margin: 4px;
   }
 }
 
@@ -305,7 +313,6 @@ footer {
   .links {
     display: inline;
     margin-left: 0.5em;
-
   }
 }
 

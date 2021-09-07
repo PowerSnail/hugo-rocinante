@@ -1,11 +1,9 @@
-<h2>
-  <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-</h2>
+<h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
 {{ range $links := .Site.Params.links }}
 <nav>
   {{- range $index, $link := $links.link -}}
-  {{if $index }} | {{end}}
+  {{if $index }}<span class="bar-delimiter">|</span>{{end}}
   <a href="{{ .href }}"> {{ .name }}</a>
-  {{- end -}}
+  {{- end }}
 </nav>
-{{ end }}
+{{- end }}

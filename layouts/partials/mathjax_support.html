@@ -1,28 +1,4 @@
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [
-        ["$", "$"],
-        ["\\(", "\\)"],
-      ],
-      displayMath: [
-        ["$$", "$$"],
-        ["\\[", "\\]"],
-      ],
-      processEscapes: true,
-      processEnvironments: true,
-    },
-    options: {
-      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-    }
-  };
-
-  window.addEventListener("load", (event) => {
-    document.querySelectorAll("mjx-container").forEach(function (x) {
-      x.parentElement.classList += "has-jax";
-    });
-  });
-</script>
-{{ $js := resources.Get "js/tex-svg.js" | resources.Minify }}
-<script type="text/javascript" id="MathJax-script" async src="{{ $js.RelPermalink }}">
-</script>
+{{ $conf_js := resources.Get "js/mathjax-conf.js" | resources.Minify -}}
+<script type="text/javascript" id="MathJax-conf-script" src="{{ $conf_js.RelPermalink }}"></script>
+{{ $math_js := resources.Get "js/tex-svg.js" | resources.Minify -}}
+<script type="text/javascript" id="MathJax-script" async src="{{ $math_js.RelPermalink }}"></script>
