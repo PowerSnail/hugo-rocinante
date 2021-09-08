@@ -104,12 +104,6 @@ dd {
   margin-left: 1.25em;
 }
 
-hr {
-  margin: 2em 0;
-  border: 0;
-  border-top: 2px dotted nth($gray_colors, 4);
-}
-
 pre,
 code {
   font-family: monospace;
@@ -187,30 +181,30 @@ sup {
 }
 
 main {
+  padding: 0px;
   max-width: 800px;
-  padding: 0 20px;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
-header {
-  max-width: 800px;
-  min-height: 100px;
-  margin: 0px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+header  {
   background: url("/images/front-cover.png") no-repeat;
   background-size: cover;
   background-color: nth($primary_colors, 2);
   background-blend-mode: overlay;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
   color: nth($primary_colors, 5);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
+  .container {
+    max-width: 800px;
+    min-height: 150px;
+    margin: 0px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   a {
     color: nth($primary_colors, 5);
@@ -227,11 +221,6 @@ header {
   h2 {
     margin: 4px;
   }
-}
-
-.about {
-  margin: 20px;
-  color: nth($primary_colors, 3);
 }
 
 .combined-title-pagination {
@@ -257,18 +246,34 @@ header {
 }
 
 footer {
-  margin-top: 3em;
-  .content-container {
-    background: nth($gray_colors, 4);
-    padding: 2em 0;
-    .content {
-      .about {
-        color: nth($gray_colors, 2);
-      }
-      max-width: 740px;
-      padding: 0 20px;
-      margin: 0 auto;
-    }
+  margin-top: 4em;
+  border-radius: 8px;
+  .about {
+    background-color: nth($primary_colors, 4);
+  }
+}
+
+.about {
+  color: nth($primary_colors, 1);
+  margin-top: 20px;
+  padding-bottom: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  h1 {
+    font-family: serif;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin: 0.5em;
+    font-family: serif;
+  }
+
+  .social-icon {
+    width: 1em;
   }
 }
 
@@ -304,7 +309,7 @@ footer {
   }
 
   padding-bottom: 1em;
-  border-bottom: 1px solid #ccc;
+  // border-bottom: 1px solid #ccc;
 }
 
 .tags {
