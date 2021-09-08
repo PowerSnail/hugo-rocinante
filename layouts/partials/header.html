@@ -1,9 +1,7 @@
 <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
-{{ range $links := .Site.Params.links }}
 <nav>
-  {{- range $index, $link := $links.link -}}
+  {{- range $index, $section := .Site.Sections -}}
   {{if $index }}<span class="bar-delimiter">|</span>{{end}}
-  <a href="{{ .href }}"> {{ .name }}</a>
+  <a href="{{ $section.RelPermalink }}"> {{ $section.Title }}</a>
   {{- end }}
 </nav>
-{{- end }}
