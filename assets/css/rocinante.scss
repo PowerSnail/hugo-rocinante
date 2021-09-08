@@ -253,6 +253,27 @@ footer {
   }
 }
 
+.combined-title-pagination {
+  margin-top: 0em;
+  margin-bottom: 2em;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  h1 {
+    color: nth($primary_colors, 2);
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+h3.current-page {
+  color: nth($primary_colors, 3);
+  text-align: right;
+  font-weight: 400;
+}
+
 .about {
   color: nth($primary_colors, 1);
   margin-top: 20px;
