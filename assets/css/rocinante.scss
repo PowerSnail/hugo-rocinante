@@ -300,24 +300,6 @@ h3.current-page {
   }
 }
 
-.horizontal-links {
-  width: 100%;
-  margin-bottom: 0.25em;
-  a {
-    color: nth($primary_colors, 2);
-    background-color: nth($primary_colors, 4);
-    border-radius: 6px;
-    padding: 0.5em;
-    margin: 0.5em;
-  }
-  a:last-child {
-    border: none;
-  }
-  &:last-child {
-    margin-bottom: 1.25em;
-  }
-}
-
 .post-list {
   h1 a {
     color: nth($gray_colors, 1);
@@ -337,10 +319,23 @@ h3.current-page {
 
 .tags {
   font-size: 0.9em;
+  display: flex;
+  align-items: baseline;
   margin-top: 50px;
-  .links {
-    display: inline;
-    margin-left: 0.5em;
+  flex-wrap: wrap;
+
+  a {
+    color: nth($primary_colors, 2);
+    background-color: nth($primary_colors, 4);
+    border-radius: 6px;
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+  a:last-child {
+    border: none;
+  }
+  &:last-child {
+    margin-bottom: 1.25em;
   }
 }
 
