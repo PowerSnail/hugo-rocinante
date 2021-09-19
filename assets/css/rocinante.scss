@@ -188,8 +188,8 @@ main {
   margin: 0px auto;
 }
 
-header  {
-  background: url("/images/front-cover.png") no-repeat;
+header {
+  background: url(/images/front-cover.png) no-repeat;
   background-size: cover;
   background-color: nth($primary_colors, 2);
   background-blend-mode: overlay;
@@ -284,7 +284,7 @@ h3.current-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   h1 {
     font-family: serif;
     margin-bottom: 0.5em;
