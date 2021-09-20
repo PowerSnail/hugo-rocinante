@@ -28,7 +28,6 @@
     {{- partial "footer.html" . -}}
   </footer>
   {{ if or (.Params.mathjax) (.IsNode) }}{{ partial "mathjax_support.html" . }}{{ end }}
-  {{ $js := resources.Get "js/rocinante.js" | resources.Minify }}
   <script src="{{ $js.RelPermalink }}"></script>
 </body>
 </html>
