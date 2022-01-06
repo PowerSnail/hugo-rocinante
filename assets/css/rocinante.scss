@@ -104,12 +104,9 @@ dd {
   margin-left: 1.25em;
 }
 
-pre,
 code {
   font-family: monospace;
   border-radius: 3px;
-}
-code {
   background: nth($primary_colors, 5);
   font-size: 0.9em;
   padding: 0.25em 0.5em;
@@ -121,6 +118,7 @@ pre code {
   margin: 1em 0;
   padding: 0.75em 1em;
   color: inherit;
+  overflow-x:scroll;
 }
 
 img,
