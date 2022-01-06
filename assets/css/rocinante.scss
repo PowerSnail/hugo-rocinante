@@ -116,7 +116,7 @@ code {
   color: nth($primary_colors, 2);
 }
 pre code {
-  background: nth($gray_colors, 1);
+  background: nth($primary_colors, 5);
   display: block;
   margin: 1em 0;
   padding: 0.75em 1em;
