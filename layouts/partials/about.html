@@ -1,7 +1,7 @@
 <div class="about">
   <h1>{{ .Site.Author.name }}</h1>
   <p>{{ .Site.Params.about | .RenderString }}</p>
-  <p>
+  <div>
     <a href="/index.xml">
       <svg
         class="social-icon"
@@ -17,9 +17,9 @@
         <circle cx="6" cy="26" r="2" fill="currentColor" />
         <path d="M4 15 C11 15 17 21 17 28 M4 6 C17 6 26 15 26 28" />
       </svg>
-      RSS</a
-    >
-    |
+      RSS
+    </a>
+    <span>|</span>
     <a href="https://github.com/PowerSnail/">
       <svg
         id="i-github"
@@ -35,5 +35,5 @@
       </svg>
       Github
     </a>
-  </p>
+  </div>
 </div>
