@@ -482,15 +482,18 @@ blockquote footer {
 }
 
 header {
-  background: url(/images/front-cover.png) no-repeat;
+  background: url(/images/front-cover4.png) no-repeat;
   background-size: cover;
-  background-color: #475661;
-  background-blend-mode: multiply;
-  color: var(--color-text-secondary);
+  background-blend-mode: overlay;
+  background-color: #111;
   padding: 2em;
+  min-height: 12em;
+  flex-direction: column; 
+  justify-content: flex-end;
+  display: flex;
 
   a {
-    color: #e3eaf0;
+    color: Gainsboro;
   }
 
   h1 {
@@ -501,7 +504,7 @@ header {
 
   nav {
     justify-content: flex-end;
-    margin-bottom: auto;
+    margin-bottom: 1em;
     flex-wrap: wrap;
 
     span {
@@ -520,9 +523,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: var(--width-card-wide);
+  margin-left:auto;
+  margin-right:auto;
 
   p {
     width: fit-content;
+    margin: 1em;
   }
 
   div {
