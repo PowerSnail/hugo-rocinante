@@ -23,5 +23,5 @@ window.addEventListener("load", (event) => {
   });
 });
 </script>
-{{ $math_js := resources.Get "js/tex-svg.js" | js.Build (dict "minify" true) }}
+{{ $math_js := resources.Get "js/tex-svg.js" | js.Build (dict "minify" true) | fingerprint }}
 <script type="text/javascript" id="MathJax-script" async src="{{ $math_js.RelPermalink }}"></script>
